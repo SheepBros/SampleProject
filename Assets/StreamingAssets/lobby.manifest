@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 3557703608
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b545fa18d2050cc506205e7ca74d37e4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: bbe2d9412d1490b7ed0a90d9b57815a6
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b39424afa983b4cf0a8a912211082ab6, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/Assets/Lobby/LobbyScreen.prefab
+Dependencies: []

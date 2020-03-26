@@ -1,0 +1,13 @@
+ManifestFileVersion: 0
+CRC: 272471797
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: common
+      Dependencies: {}
+    Info_1:
+      Name: main
+      Dependencies: {}
+    Info_2:
+      Name: lobby
+      Dependencies: {}
