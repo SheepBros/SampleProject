@@ -1,6 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using SimpleDI;
+using SB.Async;
 
 namespace SB.UI.Sample
 {
@@ -19,15 +19,23 @@ namespace SB.UI.Sample
             base.Initialize(new SampleAssetManager());
         }
 
-        protected override void InstantiateView(UIElement element, Transform parent, Action<GameObject> callback)
+        protected override IPromise<UIElement, GameObject> InstantiateView(UIElement element, Transform parent)
         {
+            Promise<UIElement, GameObject> promise = new Promise<UIElement, GameObject>();
+            if (_precachedViews.TryGetValue(element, out GameObject cachedView))
+            {
+                promise.Resolve(element, cachedView);
+                return promise;
+            }
+
             _assetManager.LoadAssetAsync<GameObject>(element.Asset, (asset) =>
             {
                 GameObject viewObject = Instantiate(asset, parent);
                 Transform viewTransform = viewObject.transform;
                 _container.Inject(viewObject);
-                callback?.Invoke(viewObject);
+                promise.Resolve(element, viewObject);
             });
+            return promise;
         }
     }
 }

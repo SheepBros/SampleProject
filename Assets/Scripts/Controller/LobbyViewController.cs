@@ -19,7 +19,7 @@ namespace SB.UI.Sample
             AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(SceneConstants.Main);
             sceneLoad.completed += (async) =>
             {
-                _uiController.ChangeSceneGraph(SceneConstants.Main, () =>
+                _uiController.ChangeSceneGraph(SceneConstants.Main).Then(() =>
                 {
                     _uiController.ClearPrecachedViews(SceneConstants.Lobby);
                 });

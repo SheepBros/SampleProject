@@ -21,7 +21,7 @@ namespace SB.UI.Sample
 
         private void Start()
         {
-            _uiController.Load(() =>
+            _uiController.Load().Then(() =>
             {
                 _uiController.ChangeSceneGraph(SceneConstants.Lobby);
             });
