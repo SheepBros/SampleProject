@@ -213,6 +213,11 @@ namespace SimpleDI
             MonoBehaviour[] monoBehaviours = gameObject.GetComponentsInChildren<MonoBehaviour>();
             foreach (MonoBehaviour behaviour in monoBehaviours)
             {
+                if (behaviour == null)
+                {
+                    continue;
+                }
+
                 InjectUtil.InjectWithContainer(this, behaviour);
             }
         }

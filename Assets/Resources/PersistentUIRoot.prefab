@@ -80,8 +80,8 @@ GameObject:
   m_Component:
   - component: {fileID: 421173647199927110}
   - component: {fileID: 2710924595175021429}
-  - component: {fileID: 2567228919147409248}
-  - component: {fileID: 8807892300932061728}
+  - component: {fileID: 8417275732749133465}
+  - component: {fileID: 4468997517932711325}
   m_Layer: 5
   m_Name: Canvas3
   m_TagString: Untagged
@@ -129,7 +129,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 200
   m_TargetDisplay: 0
---- !u!114 &2567228919147409248
+--- !u!114 &8417275732749133465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 855143137683510460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &8807892300932061728
+--- !u!114 &4468997517932711325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 855143137683510460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -178,8 +178,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3181772658937878494}
   - component: {fileID: 8960586212618037749}
-  - component: {fileID: 8431799200576264682}
-  - component: {fileID: 2890523298893657239}
+  - component: {fileID: 7134697589091489968}
+  - component: {fileID: 7475234882565103690}
   m_Layer: 5
   m_Name: Canvas4
   m_TagString: Untagged
@@ -227,7 +227,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 300
   m_TargetDisplay: 0
---- !u!114 &8431799200576264682
+--- !u!114 &7134697589091489968
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1043373098249908174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &2890523298893657239
+--- !u!114 &7475234882565103690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1043373098249908174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -309,10 +309,9 @@ Camera:
   m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
+  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -350,8 +349,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2314970591413602726}
   - component: {fileID: 2314970591413602729}
-  - component: {fileID: 2314970591413602728}
-  - component: {fileID: 2314970591413602731}
+  - component: {fileID: 2515222145027452631}
+  - component: {fileID: 7821676293711181246}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -399,7 +398,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &2314970591413602728
+--- !u!114 &2515222145027452631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408,7 +407,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2314970591413602730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -421,7 +420,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &2314970591413602731
+--- !u!114 &7821676293711181246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -430,7 +429,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2314970591413602730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -448,8 +447,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1052518663018530812}
   - component: {fileID: 7897282910080990255}
-  - component: {fileID: 5083825287880523936}
-  - component: {fileID: 3148279125320379634}
+  - component: {fileID: 8551715234804743078}
+  - component: {fileID: 8916517432348679632}
   m_Layer: 5
   m_Name: Canvas2
   m_TagString: Untagged
@@ -497,7 +496,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 100
   m_TargetDisplay: 0
---- !u!114 &5083825287880523936
+--- !u!114 &8551715234804743078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -506,7 +505,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2842279389132774662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -519,7 +518,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &3148279125320379634
+--- !u!114 &8916517432348679632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -528,7 +527,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2842279389132774662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -546,8 +545,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6461187408199784976}
   - component: {fileID: 3879926624033945487}
-  - component: {fileID: 4054613766147790270}
-  - component: {fileID: 517873220695991894}
+  - component: {fileID: 5369924170014705193}
+  - component: {fileID: 7396499572467015766}
   m_Layer: 5
   m_Name: CanvasForPrecaching
   m_TagString: Untagged
@@ -595,7 +594,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &4054613766147790270
+--- !u!114 &5369924170014705193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -604,7 +603,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3378806329536656162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -617,7 +616,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &517873220695991894
+--- !u!114 &7396499572467015766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -626,7 +625,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3378806329536656162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -644,8 +643,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3035494444607297666}
   - component: {fileID: 3068931048283241271}
-  - component: {fileID: 7416852849485023561}
-  - component: {fileID: 5091302210626811074}
+  - component: {fileID: 6113383746995728338}
+  - component: {fileID: 4221991382764475747}
   m_Layer: 5
   m_Name: Canvas5
   m_TagString: Untagged
@@ -693,7 +692,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 400
   m_TargetDisplay: 0
---- !u!114 &7416852849485023561
+--- !u!114 &6113383746995728338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -702,7 +701,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5099917325258293490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -715,7 +714,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &5091302210626811074
+--- !u!114 &4221991382764475747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -724,7 +723,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5099917325258293490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1

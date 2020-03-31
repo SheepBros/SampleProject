@@ -1,13 +1,13 @@
 ManifestFileVersion: 0
-CRC: 3103437421
+CRC: 1983016452
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: common
+      Name: lobby
       Dependencies: {}
     Info_1:
       Name: main
       Dependencies: {}
     Info_2:
-      Name: lobby
+      Name: common
       Dependencies: {}
