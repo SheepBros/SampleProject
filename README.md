@@ -1,6 +1,9 @@
 # SampleProject
 SimpleDI와 UISystem 프레임워크를 이용해서 만든 간단한 UI 샘플 프로젝트 입니다.
 
+## 실행법
+Scenes/Lobby.scene에서 실행하시면 됩니다.
+
 ## 관련 Repository
 SimpleDI: https://github.com/SheepBros/SimpleDI
 
