@@ -12,9 +12,11 @@ namespace SB.UI.Sample
         {
             GameObject persistentUIRoot = Instantiate(_persistentUIRoot);
             SampleViewHandler viewHandler = persistentUIRoot.GetComponent<SampleViewHandler>();
-            UIController uiController = new UIController(viewHandler);
+            UIDataController uiDataController = new UIDataController(viewHandler);
+            UIController uiController = new UIController(uiDataController, viewHandler);
 
             _container.BindAllInterfacesFrom<SampleViewHandler>(viewHandler);
+            _container.BindFrom<IUIDataController>(uiDataController);
             _container.BindFrom<IUIController>(uiController);
             _container.BindAllInterfaces<UserDataManager>();
         }

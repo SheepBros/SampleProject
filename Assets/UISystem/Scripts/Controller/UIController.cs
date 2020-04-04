@@ -1,86 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
 using SB.Async;
 
 namespace SB.UI
 {
     public class UIController : IUIController
     {
-        private IViewHandler _viewHandler;
+        private IUIDataController _dataController;
 
-        private UISceneList _sceneList;
+        private IViewHandler _viewHandler;
 
         private UISceneGraph _currentGraph;
 
         private UIScreenNode _currentScreen;
 
-        private Dictionary<string, UISceneGraph> _precachedSceneGraph = new Dictionary<string, UISceneGraph>();
-
         private Stack<UIScreenNode> _screenStack = new Stack<UIScreenNode>();
 
-        private bool _initialized;
-
-        public UIController(IViewHandler viewHandler)
+        public UIController(IUIDataController dataController, IViewHandler viewHandler)
         {
+            _dataController = dataController;
             _viewHandler = viewHandler;
         }
 
-        public IPromise Load()
-        {
-            Promise promise = new Promise();
-            UIDataIOUtil.Load((data) =>
-            {
-                _sceneList = data;
-                _initialized = true;
-                promise.Resolve();
-            });
-            return promise;
-        }
-
-        public IPromise PrecacheSceneUI(string sceneName)
-        {
-            Promise promise = new Promise();
-            if (!_initialized)
-            {
-                promise.Fail(new Exception("UISystem is not initialized"));
-                return promise;
-            }
-
-            if (!_sceneList.SceneGraphs.TryGetValue(sceneName, out UISceneGraph graph))
-            {
-                promise.Fail(new Exception($"There is no graph for {sceneName} scene."));
-                return promise;
-            }
-
-            if (_precachedSceneGraph.ContainsKey(sceneName))
-            {
-                promise.Resolve();
-                return promise;
-            }
-
-            return _viewHandler.PrecacheViews(graph).Then(() =>
-                {
-                    _precachedSceneGraph.Add(sceneName, graph);
-                });
-        }
-
+        /// <inheritdoc cref="IUIController.ChangeSceneGraph"/>
         public IPromise ChangeSceneGraph(string sceneName, bool precacheIfNot = true)
         {
             Promise promise = new Promise();
-            if (!_initialized)
+            if (!_dataController.IsLoaded())
             {
                 promise.Fail(new Exception("UISystem is not initialized"));
                 return promise;
             }
 
-            if (!_sceneList.SceneGraphs.TryGetValue(sceneName, out UISceneGraph graph))
+            if (!_dataController.TryGetSceneGraph(sceneName, out UISceneGraph graph))
             {
                 promise.Fail(new Exception($"There is no graph for {sceneName} scene."));
                 return promise;
             }
 
-            return PrecacheSceneUI(sceneName).Then(() =>
+            return _dataController.PrecacheSceneUI(sceneName).Then(() =>
                 {
                     _screenStack.Clear();
                     _currentScreen = null;
@@ -91,10 +49,11 @@ namespace SB.UI
                 });
         }
 
+        /// <inheritdoc cref="IUIController.RequestScreen"/>
         public IPromise RequestScreen(string screenName, object arg = null)
         {
             Promise promise = new Promise();
-            if (!_initialized)
+            if (!_dataController.IsLoaded())
             {
                 promise.Fail(new Exception("UISystem is not initialized"));
                 return promise;
@@ -127,6 +86,7 @@ namespace SB.UI
                 });
         }
 
+        /// <inheritdoc cref="IUIController.RequestScreen"/>
         public IPromise RequestBackTransition(object arg = null)
         {
             if (_currentScreen == null)
@@ -137,9 +97,10 @@ namespace SB.UI
             return RequestScreen(_currentScreen.BackTransitionNode, arg);
         }
 
+        /// <inheritdoc cref="IUIController.RequestPreviousScreen"/>
         public IPromise RequestPreviousScreen(object arg = null)
         {
-            if (!_initialized || _currentScreen == null)
+            if (!_dataController.IsLoaded() || _currentScreen == null)
             {
                 return new Promise();
             }
@@ -151,26 +112,6 @@ namespace SB.UI
 
             _screenStack.Pop();
             return RequestScreen(_screenStack.Peek().Name, arg);
-        }
-
-        public void ClearPrecachedViews(string sceneNameToRemove)
-        {
-            if (!_sceneList.SceneGraphs.TryGetValue(sceneNameToRemove, out UISceneGraph graph))
-            {
-                return;
-            }
-
-            List<UIElement> list = new List<UIElement>();
-            foreach (var pair in graph.UIElements)
-            {
-                if (!_currentGraph.UIElements.ContainsKey(pair.Key))
-                {
-                    list.Add(pair.Value);
-                }
-            }
-
-            _precachedSceneGraph.Remove(sceneNameToRemove);
-            _viewHandler.ClearCachedViews(list);
         }
     }
 }

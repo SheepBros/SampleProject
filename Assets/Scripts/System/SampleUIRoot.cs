@@ -6,14 +6,14 @@ namespace SB.UI.Sample
 {
     public class SampleUIRoot : MonoBehaviour
     {
+        private IUIDataController _uiDataController;
+
         private IUIController _uiController;
 
-        private IViewHandler _viewHandler;
-
         [Inject]
-        public void InitContexts(IViewHandler viewHandler, IUIController uiController)
+        public void InitContexts(IUIDataController uiDataController, IUIController uiController)
         {
-            _viewHandler = viewHandler;
+            _uiDataController = uiDataController;
             _uiController = uiController;
 
             MakeSceneList();
@@ -21,7 +21,7 @@ namespace SB.UI.Sample
 
         private void Start()
         {
-            _uiController.Load().Then(() =>
+            _uiDataController.Load().Then(() =>
             {
                 _uiController.ChangeSceneGraph(SceneConstants.Lobby);
             });

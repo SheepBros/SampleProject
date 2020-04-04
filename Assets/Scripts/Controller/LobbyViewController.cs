@@ -6,11 +6,14 @@ namespace SB.UI.Sample
 {
     public class LobbyViewController : IViewController
     {
+        private IUIDataController _uiDataController;
+
         private IUIController _uiController;
 
         [Inject]
-        public void InitContexts(IUIController uiController)
+        public void InitContexts(IUIDataController uiDataController, IUIController uiController)
         {
+            _uiDataController = uiDataController;
             _uiController = uiController;
         }
 
@@ -21,7 +24,7 @@ namespace SB.UI.Sample
             {
                 _uiController.ChangeSceneGraph(SceneConstants.Main).Then(() =>
                 {
-                    _uiController.ClearPrecachedViews(SceneConstants.Lobby);
+                    _uiDataController.ClearPrecachedViews(SceneConstants.Lobby);
                 });
             };
         }
