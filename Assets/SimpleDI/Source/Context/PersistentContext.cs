@@ -4,7 +4,11 @@ using UnityEngine;
 
 namespace SimpleDI
 {
-    [ExecutionOrderAttribute(-9999)]
+    /// <summary>
+    /// PersistentContext is a context that remains persistent until the game ends.
+    /// Usually, it's used to keep an instance that is used for the whole time.
+    /// </summary>
+    [ExecutionOrder(-9999)]
     public class PersistentContext : Context
     {
         private static PersistentContext _instance;
@@ -68,7 +72,11 @@ namespace SimpleDI
             GameObject[] rootGameObjects = this.gameObject.scene.GetRootGameObjects();
             foreach (GameObject gameObject in rootGameObjects)
             {
-                Container.Inject(gameObject);
+                MonoBehaviour[] monoBehaviours = gameObject.GetComponentsInChildren<MonoBehaviour>();
+                foreach (MonoBehaviour behaviour in monoBehaviours)
+                {
+                    InjectUtil.InjectWithContainer(Container, behaviour);
+                }
             }
         }
     }
