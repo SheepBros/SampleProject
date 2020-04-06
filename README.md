@@ -27,7 +27,19 @@ Manager: 실제 게임내에 이용되는 비지니스 로직과 데이터를 �
 
 MVVM + Service 아키텍처의 경우,   
 Model은 UI의 Data-Binding값을 저장하고   
-Manager는 이전 구조 그대로 비지니스 로직과 데이터를 분리합니다.   
+Manager는 이전 구조 그대로 비지니스 로직과 데이터를 분리합니다.
+
+## 의존성 주입 (Dependency Injection) 플러그인
+해당 샘플 프로젝트의 Manager 계층은 인터페이스를 사용하여 서로간의 의존성을 제거하여 구현되었기 때문에, Unit Test의 가능성 또한 열려 있습니다.   
+의존성 주입 기능은 제가 자체적으로 구현한 SimpleDI라는 프레임워크를 통해 적용되었습니다.   
+해당 플러그인은 따로 [Git Repository](https://github.com/SheepBros/SimpleDI)가 분리되어 있습니다.   
+
+## UISystem 플러그인
+샘플 프로젝트의 UI 캔버스는 다중 캔버스 레이어를 지원하는 구조로 되어 있습니다.
+때문에 UI 용도에 맞게 Screen과 Popup을 분리하여 출력시킬 수 있습니다.
+또한 데이터는 Scene->Screen->UI prefab 계층으로 이루어진 그래픽 노드 구조로 구현되어 있으며,
+Pre-caching/Back Transition 같은 기능을 가지고 있습니다.
+해당 플러그인도 따로 [Git Repository](https://github.com/SheepBros/UISystem)가 분리되어 있습니다.
 
 ## Main Scene의 UI 노드 구조
 Lobby Scene은 Lobby 스크린 하나이기에 따로 노드 구조가 없지만,   
