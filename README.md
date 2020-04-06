@@ -9,7 +9,7 @@ Scenes/Lobby.scene에서 실행하시면 됩니다.
 여기서는 Model이라는 명칭 대신 Manager로 사용하고 있습니다.   
 
 <div style="float: right;">
-<img width="864" alt="스크린샷 2020-04-06 오후 9 55 53" src="https://user-images.githubusercontent.com/62090142/78560699-70e59680-7851-11ea-80b1-d16708247cb2.png">
+<img width="847" alt="스크린샷 2020-04-06 오후 10 31 58" src="https://user-images.githubusercontent.com/62090142/78563784-7a253200-7856-11ea-8d73-4663aad1c04f.png">
 </div>
 
 View: 유니티 게임오브젝트 계층으로 사용자에게 보여지고 Input이벤트를 얻어오는 역할을 합니다.   
@@ -18,7 +18,11 @@ Manager: 실제 게임내에 이용되는 비지니스 로직과 데이터를 �
 
 이 아키텍처를 통해 코어 로직과 게임 오브젝트를 분리함으로써 유지보수를 향상 시킬 수 있습니다.   
 
-그리고 현재 프로젝트는 매우 단순하기에 추가하지 않았지만, 만약 프로젝트의 사이즈가 커질 경우, Manager 파트를 데이터 바인딩을 담당하는 Model로 분리시켜, MVVM + Service(Manager) 아키텍처로 확장할수 있는 여지 또한 존재합니다.
+그리고 현재 프로젝트는 매우 단순하기에 추가하지 않았지만, 만약 프로젝트의 사이즈가 커질 경우, Manager 파트를 데이터 바인딩을 담당하는 Model로 분리시켜, MVVM + Service(Manager) 아키텍처로 확장할수 있는 여지 또한 존재합니다.   
+
+<div style="float: right;">
+<img width="842" alt="스크린샷 2020-04-06 오후 10 31 42" src="https://user-images.githubusercontent.com/62090142/78563776-785b6e80-7856-11ea-9fbe-d9d8b6be90dc.png">
+</div>
 
 MVVM + Service 아키텍처의 경우,   
 Model은 UI의 Data-Binding값을 저장하고   
