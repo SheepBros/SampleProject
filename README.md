@@ -12,7 +12,8 @@ Scenes/Lobby.scene에서 실행하시면 됩니다.
 <img width="847" alt="스크린샷 2020-04-06 오후 10 31 58" src="https://user-images.githubusercontent.com/62090142/78563784-7a253200-7856-11ea-8d73-4663aad1c04f.png">
 </div>
 
-View: 유니티 게임오브젝트 계층으로 사용자에게 보여지고 Input이벤트를 얻어오는 역할을 합니다. View는 ViewModel을 통해서 데이터를 얻어 옵니다.   
+View: 유니티 게임오브젝트 계층으로 사용자에게 보여지고 Input이벤트를 얻어오는 역할을 합니다.   
+View는 ViewModel을 통해서 데이터를 얻어 오고 사용자에게 출력합니다.   
 ViewModel: Manager와 Model 계층을 View로부터 분리는 역할을 합니다. 일반적인 ViewModel과는 다르게 비지니스 로직을 가지고 있지 않고, 오직 View와 Manager간의 중재자 역할만을 수행합니다.   
 Manager: 실제 게임내에 이용되는 비지니스 로직과 데이터를 캡슐화한 계층 입니다.   
 
