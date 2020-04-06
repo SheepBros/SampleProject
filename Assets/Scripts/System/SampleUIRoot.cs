@@ -10,11 +10,15 @@ namespace SB.UI.Sample
 
         private IUIController _uiController;
 
+        private IUIDataIOController _uiDataIOController;
+
         [Inject]
-        public void InitContexts(IUIDataController uiDataController, IUIController uiController)
+        public void InitContexts(IUIDataController uiDataController, IUIController uiController,
+            IUIDataIOController uiDataIOController)
         {
             _uiDataController = uiDataController;
             _uiController = uiController;
+            _uiDataIOController = uiDataIOController;
 
             MakeSceneList();
         }
@@ -33,8 +37,8 @@ namespace SB.UI.Sample
             sceneList.SceneGraphs = new Dictionary<string, UISceneGraph>();
             CreateLobbySceneGraph(sceneList);
             CreateMainSceneGraph(sceneList);
-            
-            UIDataIOUtil.Save(sceneList);
+
+            _uiDataIOController.Save(sceneList);
         }
 
         private void CreateLobbySceneGraph(UISceneList sceneList)
